@@ -1,0 +1,6 @@
+---
+- hosts: iohost
+  tasks:
+     - name: poweroff 
+       command: shutdown -p now
+
