@@ -1,0 +1,9 @@
+---
+#- hosts: idrac
+
+- hosts: localhost
+  tasks:
+    - name:  poweroff machines
+      shell: source ~/.bashrc; racadm -r 20.10.83.6 -u$(echo $idrac_user) -p$(echo $idrac_password) serveraction powerup
+      args:
+        executable: /bin/bash
